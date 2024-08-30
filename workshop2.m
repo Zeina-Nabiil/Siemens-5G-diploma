@@ -171,7 +171,7 @@ function [number, ratio] = run_modulation_simulation_conv(modType, PNSeqType, Sa
     DeinterleavedSignal = deintrlv(DemodulatedSignal);
     
     % Descramble Received Signal
-    DeScrambledReceived = descrambler(DemodulatedSignal);
+    DeScrambledReceived = descrambler(DeinterleavedSignal);
 
     % Viterbi Decoder
     viterbidecoder = comm.ViterbiDecoder;
